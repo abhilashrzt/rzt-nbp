@@ -1,0 +1,234 @@
+.dropdown-arrow{
+    border-left-color:#d2d2d2;
+    border-bottom-color:#d2d2d2;
+    margin-left: 15px;
+}
+.list{
+    width: 950px;
+    position: fixed;
+    font-size: 13px;
+    opacity:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 55px;
+    margin: auto;
+    color: #5a5a5a;
+    overflow: hidden;
+    transition:0.2s all ease-in-out;
+    transform: translateY(-100%);
+    z-index: 99999;
+    border-right: 1px solid #e7e8eb;
+    border-left: 1px solid #e7e8eb;
+    background:#fff;
+}
+
+.listOverlay{
+    visibility: hidden;
+    opacity:0;
+    transition: 0.2s ease-in all;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.75);
+    left: 0;
+    right: 0;
+    top: 55px;
+    bottom: 0;
+    z-index: 99999;
+}
+
+.dropdownVisible .listOverlay{
+    visibility: visible;
+    opacity:1;
+}
+
+.dropdownVisible .list{
+    transform: translateY(0);
+    opacity:1;
+    /*visibility: visible;*/
+    /*z-index: 99999;*/
+}
+
+.dropdown{
+    /*z-index:99999;*/
+}
+
+
+.list table th, .list table td{
+    padding: 7px 35px;
+    text-align: left;
+}
+
+.list table{
+    margin-top: 0;
+}
+
+.list table td, .list table th{
+    border-left:none;
+}
+
+.evaluationStatus{
+    height:20px;
+    width:20px;
+    border-radius: 50%;
+    display:inline-block;
+    border: 1px solid #bfbfbf;
+    padding: 5px;
+}
+
+.evaluationStatus.true{
+    background: #25ae88;
+    color:white;
+    text-align: center;
+    border:none;
+}
+
+.evaluationStatus:before{
+    display: block;
+}
+
+.evaluationStatus.true:before{
+    font-size: 10px;
+    transform: scale(1);
+}
+
+.evaluationStatus.false:before{
+    font-size: 10px;
+    transform: scale(0);
+}
+
+.pageination li {
+    display: inline-block;
+    float: left;
+    border-radius: 2px;
+    padding: 4px 6px;
+    margin: 10px 5px;
+    min-width: 28px;
+    height: 28px;
+    text-align: center;
+    cursor: pointer;
+    background: #fff;
+    user-select: none;
+    -webkit-user-select: none;
+    font-weight: 300;
+    color: grey;
+}
+
+.pageination li.active {
+    font-weight: 800;
+    color: black;
+}
+
+a.prev, a.next, a.pageEllipsis{
+    display: inline-block;
+    border-radius: 2px;
+    padding-top: 4px;
+    margin: 15px 5px;
+    border: 1px solid #bfbfbf;
+    width: 28px;
+    height:28px;
+    text-align: center;
+    cursor: pointer;
+    background: #fff;
+    text-decoration: none;
+    color:inherit;
+    user-select:none;
+    -webkit-user-select:none;
+}
+
+a.prev:before, a.next:before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border: 1px solid transparent;
+    border-top-color: #909090;
+    border-right-color: #909090;
+}
+
+a.prev:before{
+    transform: rotate(-135deg);
+    margin-left: 6px;
+    margin-top: 2px;
+}
+
+a.next:before{
+    transform: rotate(45deg);
+    margin-left: -4px;
+    margin-top: 2px;
+}
+
+.pageination {
+    margin-top: 5px;
+    display:inline-block;
+}
+
+.wrapper{
+    text-align: center;
+    background:#f2f3f7;
+}
+
+.paginationWrap{
+    display: inline-block;
+}
+
+.pageEllipsis{
+    border: none;
+    margin: 10px 5px;
+    padding-top: 6px;
+    cursor: default;
+}
+
+
+.prev, .next, .pageEllipsis{
+    display: inline-block;
+    border-radius: 2px;
+    padding-top: 6px;
+    margin: 15px 5px;
+    border: 1px solid #bfbfbf;
+    width: 28px;
+    height:28px;
+    text-align: center;
+    cursor: pointer;
+    background: #fff;
+    text-decoration: none;
+    color:inherit;
+}
+
+.prev:before, .next:before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border: 1px solid transparent;
+    border-top-color: #909090;
+    border-right-color: #909090;
+}
+
+.prev:before{
+    transform: rotate(-135deg);
+    margin-left: 6px;
+    margin-top: 2px;
+}
+
+.next:before{
+    transform: rotate(45deg);
+    margin-left: -4px;
+    margin-top: 2px;
+}
+
+.pageEllipsis{
+    border: none;
+    margin: 10px 5px;
+    padding-top: 6px;
+    cursor: default;
+}
+
+@media all and (max-width:950px){
+    .list{
+        width:100%;
+    }
+
+    .list table th, .list table td{
+        padding: 7px 15px;
+    }
+}

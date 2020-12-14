@@ -1,0 +1,54 @@
+.axis-label{
+    font-size: 8px;
+    color: #007de0;
+}
+
+.customTooltip{
+    background: #fff;
+    padding: 7px 12px;
+    font-size: 12px;
+    border-radius: 2px;
+    box-shadow: 0px 0px 7px grey;
+    color: rgba(105, 105, 105, 0.7);
+    line-height: 20px;
+}
+
+.tooltipKey{
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.tooltipValue{
+    font-weight: 600;
+    padding-left: 7px;
+}
+
+
+.legendIcon{
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+}
+
+.legendText{
+    position: relative;
+    margin-left: 8px;
+    font-size: 11px;
+    color: #3c3434;
+    font-weight: 100;
+}
+
+.legend{}
+
+.legend > li{
+    margin-left: 25px;
+    display: inline-block;
+}
+
+.legendWrapper{
+    position: absolute;
+    height: auto;
+    top: -29px;
+    right: 0;
+    width: 100%;
+}

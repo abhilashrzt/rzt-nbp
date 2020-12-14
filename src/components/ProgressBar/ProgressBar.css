@@ -1,0 +1,29 @@
+.wrapper{
+    height: 9px;
+    margin: 10px 0;
+}
+
+.track{
+    background: #D5D6DA;
+    border-radius: 10px;
+    height:100%;
+    overflow: hidden;
+    display: inline-block;
+    width: calc(100% - 32px);
+    box-shadow: inset 0px 0px 9px rgba(0, 0, 0, 0.19);
+
+}
+.thumb{
+    background: #3498DB;
+    display: block;
+    border-radius: 10px;
+    height: 100%;
+    width:0;
+    transition:0.18s all ease-in;
+}
+
+.text{
+    display: inline-block;
+    margin-left: 5px;
+    float: right;
+}

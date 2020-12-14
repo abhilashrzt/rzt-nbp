@@ -1,0 +1,28 @@
+.list-wrapper{}
+.list{
+    margin-bottom: 10px;
+    list-style-type: disc;
+    padding-left: 18px;
+}
+.header{
+    padding: 15px 0 5px 0;
+
+}
+.header__title{
+    font-size: 14px;
+    color: #27282e;
+}
+.list__item{
+    color: #212329;
+    padding: 5px 0;
+    line-height: 19px;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 0.2px;
+}
+
+.emptyData{
+    color: #a6a7ab;
+    padding: 2px 0px 9px;
+    display: block;
+}

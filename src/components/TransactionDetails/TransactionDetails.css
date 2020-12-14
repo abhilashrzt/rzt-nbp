@@ -1,0 +1,44 @@
+.chartListWrapper{
+    /*min-height:360px;*/
+}
+
+.rightSection{
+    height: 100%;
+}
+ul.chartList {
+    font-size: 12px;
+    display: inline-block;
+    border: 1px solid #bfbfbf;
+    border-right: none;
+    position: relative;
+    margin: 6px 0 4px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+ul.chartList li {
+    padding: 10px 15px;
+    text-align: center;
+    cursor: pointer;
+    float: left;
+    min-width: 120px;
+    text-transform: uppercase;
+    border-right: 1px solid #bfbfbf;
+    background: #fff;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+ul.chartList li.active{
+    background: #f2f3f7;
+}
+ul.ax-chart__list li:not(.active):hover{
+    background: rgba(192, 192, 192, 0.13);
+}
+
+.customer-tables{
+    height: calc(100% - 367px);
+    background: rgba(242, 243, 247, 0.64);
+    min-height:143px;
+    overflow: hidden;
+    border: 1px solid #e7e8eb;
+    border-radius: 3px;
+}

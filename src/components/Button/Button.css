@@ -1,0 +1,152 @@
+.primary {
+    background: #fff;
+    border: 1px solid rgba(215, 215, 215, 0.75);
+    padding: 5px 30px;
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 3px;
+    box-shadow: 0px 2px 8px 1px #eaeaea;
+    height: 35px;
+    margin-right: 10px;
+    color: #212329;
+}
+
+button[disabled] {
+    border: 1px solid rgba(215, 215, 215, 0.5);
+    color: rgba(33, 35, 41, 0.4);
+    cursor: no-drop;
+}
+
+.action:before{
+    font-size:16px;
+    color: rgb(33, 35, 41);
+    cursor: no-drop;
+}
+
+button[disabled]:before {
+    color: rgba(33, 35, 41, 0.4);
+}
+
+.pair{
+    border-right:none;
+    margin-right:0;
+}
+
+.pair,
+.pair + button{
+    width: 60px;
+    box-shadow: none;
+    margin-top: 0;
+    margin-right: 0;
+}
+
+button.pair {
+    border-radius: 3px 0 0 3px;
+    border-right: none;
+    position: relative;
+    padding: 0;
+}
+
+button.redo {
+    border-left: none;
+    border-radius: 0 3px 3px 0;
+    padding: 0;
+    position: relative;
+}
+
+/*button.redo:after {*/
+    /*content: '';*/
+    /*position: absolute;*/
+    /*width: 200%;*/
+    /*box-shadow: 0px 2px 8px 1px #eaeaea;*/
+    /*height: 100%;*/
+    /*left: -100%;*/
+    /*top: 0;*/
+    /*z-index: -1;*/
+/*}*/
+
+button.pair:after {
+    content: '';
+    position: absolute;
+    height: calc(100% - 6px);
+    width: 1px;
+    background: #e1e1e1;
+    top: 3px;
+    right: 0;
+}
+
+.redo:before{
+    transform: rotateY(180deg);
+    display: inline-block;
+}
+
+.status-list__action-button {
+    display: inline-block;
+    width: 230px;
+    font-size: 14px;
+    font-weight: 600;
+    height: 42px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    letter-spacing: 0.04em;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.1);
+    color: #26282e;
+}
+
+.title-list__action-button:before, .status-list__action-button:before{
+    transition: 0.13s ease-out all;
+}
+
+.title-list__action-button:hover:before {
+    color: #949494;
+}
+
+.title-list__action-button:hover:active {
+    transform: scale(0.85);
+}
+
+.status-list__action-button:active {
+    transform: scale(0.95);
+}
+
+.title-list__action-button {
+    width: 23px;
+    height: 40px;
+    border: none;
+    margin-left: 5px;
+    background-color: transparent;
+    margin-top: 2px;
+}
+
+.title-list__action-button:before {
+    color: rgba(20, 24, 35, 0.3);
+}
+
+
+.arrow-button-icon {
+    position: relative;
+    padding-right: 45px;
+    margin: 18px;
+    padding-left: 20px;
+}
+
+.title-list__action-button.customer-action {
+    border: 1px solid rgba(209, 209, 210, 0.6);
+    width: 50px;
+    height: 30px;
+    border-radius: 3px;
+    margin-top: 4px;
+    position: relative;
+    left: -5px;
+    box-shadow: 1px 1px 6px 1px rgba(204, 204, 204, 0.6);
+}
+
+.title-list__action-button.customer-action:before {
+    color: rgba(20, 24, 35, 0.25);
+}
+
+.title-list__action-button.customer-action:hover:before {
+    color: rgba(20, 24, 35, 0.55);
+}

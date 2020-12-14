@@ -1,0 +1,121 @@
+
+.head table, .body table {
+    width: 100%;
+    border-collapse: collapse;
+    border-left: none;
+    border-right: none;
+    table-layout:fixed;
+}
+.head{
+    background: #f2f3f7;
+    padding: 8px 0;
+    box-shadow: 0 3px 5px rgba(156, 156, 156, 0.25);
+    border-bottom: 1px solid #e7e8eb;
+    border-radius: 3px 3px 0 0;
+    position: relative;
+}
+.head table{
+    border-bottom: none;
+    text-transform: UPPERCASE;
+}
+
+.body table{
+    border-top: none;
+}
+
+.body table tr:nth-child(2n){
+    background: #f2f3f7;
+}
+
+.table table th, .table table td {
+    padding: 5px 18px;
+    text-align: left;
+    border-left: 1px solid #e7e8eb;
+    font-size:13px;
+}
+
+.table table th:first-child, .table table td:first-child{
+    border-left: none;
+}
+
+.head table tr :first-child th, .body table tr :first-child td{
+    border-left: none;
+    border-bottom: none;
+}
+
+.table{
+    height: calc(100% - 6px);
+    min-height: 100px;
+}
+
+.body{
+    overflow:auto;
+    max-height: calc(100% - 38px);
+    border-bottom: 1px solid #e7e8eb;
+    border-top: none;
+}
+
+.table table td {
+    font-size: 11px;
+    padding: 9px 18px;
+    word-break: break-word;
+    word-wrap: break-word;
+}
+
+.body tr:nth-child(2n){
+    background: #fbfcfc;
+}
+
+.body tr {
+    background-color: #fff;
+}
+
+.headerList.table{
+    height: calc(100% - 70px);
+    padding-top: 20px;
+}
+
+.headerList .body{
+    max-height: calc(100% - 48px);
+    overflow: auto;
+    border: 1px solid #e7e8eb;
+    border-top: none;
+    border-radius: 0 0 3px 3px;
+    background-color: #fff;
+}
+
+.headerList .body table tr{
+    cursor: pointer;
+}
+
+.headerList .head table{
+    border-top:none;
+}
+
+.headerList .body table tr:hover {
+    background: rgba(177, 177, 177, 0.27);
+}
+
+.noWordBreak .body table td{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*@media all and (min-width:1368px) and (max-width:1434px){*/
+    /*.table{*/
+        /*height:calc(100% - 358px);*/
+    /*}*/
+/*}*/
+
+/*@media all and (min-width:1021px) and (max-width:1100px){*/
+    /*.table{*/
+        /*height:calc(100% - 358px);*/
+    /*}*/
+/*}*/
+
+/*@media all and (max-width:745px){*/
+    /*.table{*/
+        /*height:calc(100% - 358px);*/
+    /*}*/
+/*}*/

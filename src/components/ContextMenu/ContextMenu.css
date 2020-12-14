@@ -1,0 +1,32 @@
+.menu ul li {
+    padding: 7px 13px;
+    cursor: pointer;
+}
+
+.menu {
+    position: fixed;
+    top: 42px;
+    width: 130px;
+    left: 483px;
+    animation: menuEntry 0.12s ease-in;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.26);
+    /*display:none;*/
+}
+
+@keyframes menuEntry {
+    from{
+        opacity: 0;
+    } to{
+          opacity: 1;
+    }
+}
+
+.menu ul {
+    padding: 5px  0;
+    background: #f2f3f7;
+    border-radius: 2px;
+}
+
+.menu ul li:hover {
+    background: white;
+}

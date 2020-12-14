@@ -1,0 +1,65 @@
+.handleArea {
+    width: 116px;
+    bottom: 49px;;
+    position: absolute;
+    top:4px;
+    background: rgba(237, 236, 239, 0.44);
+    pointer-events: none;
+}
+
+.handleArea.left{
+    left:59px;
+}
+
+.handleArea.right{
+    right:5px;
+}
+
+.handle{
+    cursor: col-resize;
+    width: 1px;
+    position: absolute;
+    pointer-events: auto;
+    top: 0;
+    bottom: 50px;
+    padding: 0;
+    border: 4px solid transparent;
+}
+
+.handle:before {
+    content: '';
+    background: #2f3438;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.handle.left{
+    left: 170px;
+}
+
+.handle.right{
+    left:calc(100% - 130px);
+}
+
+.handle:after{
+    content:'';
+    position: absolute;
+    border: 8px solid transparent;
+    height: 0;
+    width: 0;
+    bottom: -14px;
+}
+
+.handle.right:after{
+    left: -7px;
+    border-right-color: #2f3438;
+    border-left: none;
+}
+
+.handle.left:after{
+    right: -8px;
+    border-left-color: #2f3438;
+    border-right: none;
+}

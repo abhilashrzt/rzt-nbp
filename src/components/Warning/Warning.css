@@ -1,0 +1,10 @@
+.info{
+    position: absolute;
+    bottom: 0px;
+    background: #FFC107;
+    width: 100%;
+    text-align: center;
+    padding: 9px 0;
+    font-size: 17px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.32);
+}

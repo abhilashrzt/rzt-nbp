@@ -1,0 +1,157 @@
+.pageination li {
+    display: inline-block;
+    float: left;
+    border-radius: 2px;
+    padding: 4px 6px;
+    margin: 10px 5px;
+    min-width: 28px;
+    height: 28px;
+    text-align: center;
+    cursor: pointer;
+    background: #fff;
+    user-select: none;
+    -webkit-user-select: none;
+    font-weight: 300;
+    color: rgba(20, 24, 35, 0.3);
+}
+
+.pageination li.active {
+    font-weight: 800;
+    color: #000;
+}
+
+.pageination li:hover{
+    color: #000;
+}
+
+a.prev, a.next, a.pageEllipsis{
+    display: inline-block;
+    border-radius: 2px;
+    padding-top: 4px;
+    margin: 15px 5px;
+    border: 1px solid #bfbfbf;
+    width: 28px;
+    height:28px;
+    text-align: center;
+    cursor: pointer;
+    background: #fff;
+    text-decoration: none;
+    color:inherit;
+    user-select:none;
+    -webkit-user-select:none;
+}
+
+a.prev:before, a.next:before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border: 1px solid transparent;
+    border-top-color: #909090;
+    border-right-color: #909090;
+}
+
+a.prev:before{
+    transform: rotate(-135deg);
+    margin-left: 6px;
+    margin-top: 2px;
+}
+
+a.next:before{
+    transform: rotate(45deg);
+    margin-left: -4px;
+    margin-top: 2px;
+}
+
+.pageination {
+    margin-top: 5px;
+    display:inline-block;
+}
+
+.wrapper{
+    text-align: center;
+    background:#f2f3f7;
+}
+
+.paginationWrap{
+    display: inline-block;
+}
+
+.pageEllipsis{
+    border: none;
+    margin: 10px 5px;
+    padding-top: 6px;
+    cursor: default;
+}
+
+
+.prev, .next, .pageEllipsis{
+    display: inline-block;
+    border-radius: 2px;
+    padding-top: 6px;
+    margin: 15px 5px;
+    border: 1px solid #d7d7d7;
+    width: 28px;
+    height:28px;
+    text-align: center;
+    cursor: pointer;
+    background: #fff;
+    text-decoration: none;
+    color:inherit;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(192, 192, 192, 0.08);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+}
+.prev:before, .next:before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border: 1px solid transparent;
+    border-top-color: #909090;
+    border-right-color: #909090;
+}
+
+.prev:before{
+    transform: rotate(-135deg);
+    margin-left: 6px;
+    margin-top: 2px;
+}
+
+.next:before{
+    transform: rotate(45deg);
+    margin-left: -4px;
+    margin-top: 2px;
+}
+.next.jump:after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border: 1px solid transparent;
+    border-top-color: #909090;
+    border-right-color: #909090;
+    transform: rotate(45deg);
+    margin-left: -4px;
+    margin-top: 2px;
+}
+.prev.jump:after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border: 1px solid transparent;
+    border-top-color: #909090;
+    border-right-color: #909090;
+    transform: rotate(-135deg);
+    margin-left: -4px;
+    margin-top: 2px;
+}
+.pageEllipsis{
+    border: none;
+    margin: 10px 5px;
+    padding-top: 6px;
+    cursor: default;
+}
