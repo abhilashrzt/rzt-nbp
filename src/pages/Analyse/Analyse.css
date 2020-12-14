@@ -1,0 +1,166 @@
+.wrapper {
+    /*height: calc(100vh - 80px);*/
+    height: calc(100vh - 55px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.analyse{
+    width: 1241px;
+    margin: auto;
+}
+
+.header {
+    width: 1241px;
+    margin: auto;
+    margin: 35px auto 0;
+}
+
+.header > div{
+    display: flex;
+}
+
+.header__title {
+    font-size: 18px;
+    font-weight: 400;
+    width: calc(100% - 520px);
+    border-bottom: 1px solid #949599;
+    padding-bottom: 7px;
+    position: relative;
+    flex: 1;
+}
+
+.header__title h3{
+    display: inline-block;
+}
+
+.filter{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.filter li {
+    border: 1px solid #eaeaea;
+    font-size: 14px;
+    margin: 0px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px #e9e9ea;
+    position: relative;
+    padding: 4px 30px 4px 10px;
+    color: rgba(33, 35, 41, 0.35);
+}
+.highlight{
+    font-weight:700;
+    color:#212329;
+    width: 100px;
+    float: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.close-filter-ico{
+    margin: 0 5px 0 5px;
+    font-size: 7px;
+    position: absolute;
+    top: 8px;
+    right: 0;
+    cursor: pointer;
+}
+
+.close-filter-ico:before{
+    font-size: 8px;
+}
+
+.analyse-wrapper{
+    /*height: calc(100% - 95px);*/
+    overflow: auto;
+    padding: 30px 0 15px;
+    display: block;
+    flex: 1;
+}
+
+.depthDropdown {
+    font-size: 18px !important;
+    text-transform: UPPERCASE;
+    min-width: 220px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.depthDropdown.mdWidth{
+    width:185px;
+}
+
+.depthDropdown.lgWidth{
+    width:280px;
+}
+
+.search-field{
+    border-bottom: 0.5px solid #C3C4C8;
+}
+.search-icon{
+    color: #C3C4C8;
+}
+
+.search-icon:before{
+    font-size:15px;
+}
+
+.search-input{
+    width: 354px;
+    padding: 5px 8px;
+    border: none;
+
+}
+
+/* ::: pagination styles starts here */
+
+.pagination {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 45px;
+    z-index: 9;
+}
+
+.pagination [class^="Pagination__wrapper"] {
+    background-color: #fff;
+    position: relative;
+    padding-top: 8px;
+}
+
+.pagination [class^="Pagination__prev"],
+.pagination [class^="Pagination__next"],
+.pagination [class^="Pagination__pageEllipsis"] {
+    border-radius: 3px;
+    padding-top: 5px;
+    margin-top: 0;
+}
+
+.pagination [class^="Pagination__pageination"] {
+    margin: 0 4px;
+}
+.pagination [class^="Pagination__pageination"] li {
+    border-radius: 3px;
+    padding: 5px 6px;
+    margin: 0 8px;
+}
+
+.pagination [class^="Pagination__wrapper"]:before {
+    content: '';
+    position: absolute;
+    box-shadow: 0px 1px 11px 0 rgba(0, 0, 0, 0.38);
+    height: 1px;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    border-top: 1px solid #d7d7d7;
+}
+
+/* ::: pagination styles ends here */

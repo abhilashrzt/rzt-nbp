@@ -1,0 +1,29 @@
+.container{
+    height: 100%;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 400;
+    color: #212329;
+    display: block;
+    margin: 8px 0 10px;
+}
+
+.graph-container {
+    width: 100%;
+    height: calc(100% - 18px);
+    position: relative;
+    left: -22px;
+}
+
+.graph-container__bg {
+    background: white;
+    position: absolute;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.22);
+    border-radius: 3px;
+    width: calc(100% - 45px);
+    height: calc(100% - 18px);
+    top: 0px;
+    left: 40px;
+}

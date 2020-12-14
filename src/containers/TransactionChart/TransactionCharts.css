@@ -1,0 +1,34 @@
+.recharts-y-axis text.recharts-cartesian-axis-tick-value,
+.recharts-x-axis text.recharts-cartesian-axis-tick-value {
+    font-size: 11px;
+    /*fill: rgba(47, 52, 56, 0.64);*/
+    fill:#a6a7ab;
+    font-weight: 300;
+}
+
+.ax-chart_line .recharts-y-axis text.recharts-cartesian-axis-tick-value {
+    transform: translate(-2px, -4px);
+}
+
+.ax-chart_line .recharts-layer.recharts-y-axis {
+    transform: translate(-4px, 0);
+}
+
+.ax-chart_line .recharts-x-axis text.recharts-cartesian-axis-tick-value {
+    transform: translateY(12px);
+}
+
+.recharts-tooltip-wrapper{
+    z-index: 999;
+}
+
+svg.recharts-surface{
+    overflow:visible !important;
+}
+
+.recharts-layer.recharts-cartesian-axis > text{
+    fill: #000000;
+    font-weight: 300;
+    font-size: 9px;
+    letter-spacing: 1px;
+}

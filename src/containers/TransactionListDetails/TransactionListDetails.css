@@ -1,0 +1,245 @@
+.analyse{
+    padding-bottom: 10px;
+}
+.analyse-main{
+    display: flex;
+    justify-content: center;
+}
+
+.analyse.visible{
+    height:auto;
+    overflow: auto;
+}
+
+.analyse.noscroll{
+    overflow: hidden;
+}
+
+.analyse .desc{
+    font-size: 22px;
+    margin: 8px 0;
+    font-weight: 300;
+    color: #7F8C8D;
+}
+
+.analyseBtn{
+    height: auto;
+    padding: 10px 10px;
+    white-space: nowrap;
+    display: block;
+    width: 150px;
+    margin: 12px 0;
+    position: relative;
+    left: -15px;
+    top: -15px;
+}
+
+.title-list__title {
+    display: block;
+    font-size: 13px;
+    color: rgba(33, 35, 41, 0.35);
+    text-transform: uppercase;
+    margin-bottom: 2px
+}
+
+.primary-graph {
+    min-height: 286px;
+    position: relative;
+}
+
+.secondary-graph{
+    height: 170px;
+    position: relative;
+    /*flex: 1 0 0;*/
+}
+
+.analyse-col__title {
+    font-size: 14px;
+    font-weight: 400;
+    color: #212329;
+    display: block;
+    margin: 8px 0 15px;
+}
+
+.secondary-graph .analyse-col__title{
+    margin-bottom:10px;
+}
+
+.analyse-col__graph-container {
+    width:100%;
+    height: calc(100% - 18px);
+    position: relative;
+    left:-22px;
+}
+
+.analyse-col__list {
+    margin-top: 12px;
+    max-height: calc(100% - 160px);
+    padding-bottom: 20px;
+}
+
+.analyse-col__list__item {
+    font-weight: 100;
+    font-size: 13px;
+    color: rgba(20, 24, 35, 0.6);
+    padding-bottom: 5px;
+}
+
+.analyse-col__list__item:before {
+    content: '';
+    float: left;
+    width: 6px;
+    height: 6px;
+    background: rgba(20, 24, 35, 0.4);
+    border-radius: 50%;
+    margin-top: 7px;
+    margin-right: 10px;
+}
+
+.analyse-col__graph-container__bg {
+    background: white;
+    position: absolute;
+    width: calc(100% - 35px);
+    height: calc(100% - 35px);
+    top: 0px;
+    left: 40px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.22);
+    border-radius: 3px;
+}
+
+.secondary-graph .analyse-col__graph-container__bg{
+    width: calc(100% - 45px);
+    height: calc(100% - 18px);
+    top: 0px;
+    left: 40px;
+}
+
+.analyse-col__graph-container__bg__line {
+    height: 1px;
+    background: #ddd;
+}
+
+.insightContainer {
+    /*margin-top: 22px;*/
+}
+
+.actionsCol {
+    width: calc(50% - 10px);
+    float: left;
+}
+
+.actionsTextWrapper {
+    margin-bottom: 10px;
+}
+
+.actionsText1 {
+    color: #21e1ad;
+    font-size: 80px;
+    font-weight: 100;
+    margin-top: 6px;
+    display: block;
+    line-height: 65px;
+}
+
+.actionsText2 {
+    color: #21e1ad;
+    font-size: 26px;
+    padding-left: 5px;
+}
+
+.innerDataset {
+
+}
+
+.seconday-graph-wrapper{
+    display:flex;
+    justify-content: space-between;
+    height: 210px;
+}
+
+
+.col-1{
+    width: 910px;
+    padding-left: 25px;
+}
+
+.col-2{
+    width: calc(100% - 950px);
+    padding: 0 25px 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.col-2 button{
+    font-size: 12px;
+    height: 38px;
+}
+
+.insights-list{
+    color: #C3C4C8;
+    font-size: 14px;
+    margin: 12px 0;
+}
+
+.insights-list li{
+    line-height: 18px;
+    margin-bottom: 8px;
+}
+
+.quad-container {
+    position: relative;
+    cursor: default;
+    width: 215px;
+    height: 135px;
+    top: 0px;
+    left: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+.quantile {
+    width: Calc(100% / 2);
+    height: Calc(100% / 2);
+    box-sizing: border-box;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.quantile:nth-child(1) {
+    border-right: 0.03em solid rgba(151, 151, 151, 0.22);
+    border-bottom: 0.03em solid rgba(151, 151, 151, 0.22);
+}
+
+.quantile:nth-child(2) {
+    border-bottom: 0.03em solid rgba(151, 151, 151, 0.22);
+}
+
+.quantile:nth-child(3) {
+    border-right: 0.03em solid rgba(151, 151, 151, 0.22);
+}
+
+.quantile_title {
+    width: 51.89px;
+    height: 24px;
+    opacity: 0.5;
+    font-size: 18px;
+    line-height: 24px;
+    color: #141823;
+}
+.quantile_value{
+    font-size: 22px;
+    font-weight: bold;
+    text-align: right;
+    color: #212329;
+    float: right;
+}
+.container {
+
+}

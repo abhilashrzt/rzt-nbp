@@ -1,0 +1,89 @@
+.chartSection {
+    border: 1px solid #efeaea;
+    margin-bottom: 10px;
+    height: 357px;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.subsectionContent {
+    padding: 5px 30px 0;
+    margin-top:48px;
+}
+
+.chartSectionHeader {
+    box-shadow: 0 2px 3px 2px #efefef;
+    padding: 8px 16px;
+    height: 36px;
+    border-radius: 3px;
+}
+
+.subSectionHeadtxt {
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    background: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    color: #32343a;
+}
+
+.subSectionText {
+    color: #7a7878;
+    font-weight: 100;
+    padding-top: 3px;
+    font-size: 12px;
+}
+
+ul.categories li {
+    padding-left: 25px;
+    position: relative;
+    margin-left: 20px;
+    font-size: 11px;
+    color: #3c3434;
+    font-weight: 100;
+}
+
+ul.categories {
+    display: flex;
+    margin: 16px 0;
+}
+
+ul.categories li:before {
+    content: '';
+    height: 12px;
+    width: 12px;
+    background: green;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 5px;
+}
+
+.area {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    display: inline-block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media all and (min-width: 1368px) and (max-width: 1434px) {
+    .chartSection {
+        min-height: 338px;
+    }
+}
+
+@media all and (min-width: 1021px) and (max-width: 1100px) {
+    .chartSection {
+        min-height: 338px;
+    }
+}
+
+@media all and (max-width: 745px) {
+    .chartSection {
+        min-height: 338px;
+    }
+}

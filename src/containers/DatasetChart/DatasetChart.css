@@ -1,0 +1,38 @@
+.chartHeader {
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.chartHeader h4 {
+    font-weight: 400;
+}
+
+.chartContent {
+    position: relative;
+    left: -25px;
+    height: calc(100% - 18px);
+}
+
+.legendWrapper {
+    position: absolute;
+    height: auto;
+    top: -29px;
+    right: 0;
+    width: 100%;
+}
+
+.chartSection {
+    height: 100%;
+}
+
+.graph-container__bg {
+    background: #fff;
+    display: block;
+    position: absolute;
+    top: 38px;
+    bottom: 22px;
+    left: 35px;
+    right: 29px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.18);
+    border-radius: 3px;
+}

@@ -1,0 +1,154 @@
+.wrapper {
+    height: calc(100vh - 55px);
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    width: 1241px;
+    margin: 35px auto 0px;
+    display: flex;
+}
+
+.header__title {
+    font-size: 18px;
+    font-weight: 400;
+    border-bottom: 1px solid #949599;
+    padding-bottom: 7px;
+    flex: 1;
+}
+
+.segmentDropdown{
+    max-width: 330px;
+}
+
+.customerList-wrapper{
+    /*height: calc(100% - 95px);*/
+    overflow: auto;
+    padding: 30px 0;
+    flex: 1;
+}
+
+.customerList {
+    width: 1241px;
+    margin: auto;
+}
+
+.search-field{
+    border-bottom: 0.5px solid #C3C4C8;
+}
+.search-icon{
+    color: #C3C4C8;
+}
+
+.search-icon:before{
+    font-size:15px;
+}
+
+.search-input{
+    width: 354px;
+    padding: 5px 8px;
+    border: none;
+}
+
+
+/* ::: FILTER SELECTION STYLES STARTS HERE ::: */
+
+.filter-selection {
+    border: 1px solid #e9e9ea;
+    float: right;
+    padding: 3px 35px 3px 15px;
+    border-radius: 3px;
+    position: relative;
+    box-shadow: 0 0 4px 0 rgb(196, 196, 196);
+    margin-left: 25px;
+}
+
+.filter-selection__title {
+    color: rgba(0, 0, 0, 0.3);
+    float: left;
+}
+
+.filter-selection__sub-title {
+    font-weight: 700;
+    padding-left: 10px;
+    float: left;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.filter-selection__action-btn {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    top: 0;
+    width: 25px;
+    border: none;
+    background: none;
+}
+
+.filter-selection__action-btn:before {
+    content: '+';
+    position: absolute;
+    font-size: 24px;
+    font-weight: 100;
+    font-family: arial, sans-serif;
+    transform: rotate(45deg);
+    opacity: 0.3;
+    top: -1px;
+    right: 7px;
+}
+
+.filter-selection__action-btn:hover:before {
+    opacity: 0.6;
+}
+
+
+/* ::: FILTER SELECTION STYLES ENDS HERE ::: */
+
+
+/* ::: pagination styles starts here */
+
+.pagination {
+    height: 45px;
+    z-index: 99;
+}
+
+.pagination [class^="Pagination__wrapper"] {
+    background-color: #fff;
+    position: relative;
+    padding-top: 8px;
+}
+
+.pagination [class^="Pagination__prev"],
+.pagination [class^="Pagination__next"],
+.pagination [class^="Pagination__pageEllipsis"] {
+    border-radius: 3px;
+    padding-top: 5px;
+    margin-top: 0;
+}
+
+.pagination [class^="Pagination__pageination"] {
+    margin: 0 4px;
+}
+.pagination [class^="Pagination__pageination"] li {
+    border-radius: 50%;
+    padding: 5px 6px;
+    margin: 0 0px;
+}
+
+.pagination [class^="Pagination__wrapper"]:before {
+    content: '';
+    position: absolute;
+    box-shadow: 0px 1px 11px 0 rgba(0, 0, 0, 0.38);
+    height: 1px;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    border-top: 1px solid #d7d7d7;
+}
+
+/* ::: pagination styles ends here */
