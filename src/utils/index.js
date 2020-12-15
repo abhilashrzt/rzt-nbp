@@ -1,5 +1,6 @@
+import _ from 'lodash';
 export {createReducerFromObject} from './reducerUtils';
-export {request, dsProgressListener, dsListener} from './request';
+export {request} from './request';
 export {getHooks} from './hooks';
 export {dateformatter} from './formatter';
 export {cancelSaga} from './sagaUtils';

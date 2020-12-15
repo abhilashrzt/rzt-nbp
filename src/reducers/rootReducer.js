@@ -1,4 +1,4 @@
 import { combineReducers } from 'redux'
-import toDoApp from './reducers';
+import global from './reducers';
 
-export default combineReducers({toDoApp})
+export default combineReducers({global})

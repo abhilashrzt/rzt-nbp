@@ -7,6 +7,7 @@
     "connected-react-router": "^6.8.0",
     "history": "^5.0.0",
     "immutable": "^4.0.0-rc.12",
+    "lodash": "^4.17.20",
     "react": "^17.0.1",
     "react-addons-transition-group": "^15.6.2",
     "react-css-modules": "^4.7.11",

@@ -17,7 +17,7 @@ class App extends React.Component {
             notification = <NotificationBar data={this.props.notification}
                                             hideNotificationBar={this.props.hideNotificationBar}/>
         return (
-            /*<TransitionGroup component="div">
+            <TransitionGroup component="div">
                 <div style={ loader > 0 ? { filter:'blur(2px)' } : {}}>
                 { header }
                 { main }
@@ -28,8 +28,7 @@ class App extends React.Component {
                   <span>You have unsaved changes. <br/> Do you wish to continue without saving ?</span>
                 </Popup> }
 
-            </TransitionGroup>*/
-          <div>Test app</div>
+            </TransitionGroup>
         );
 
     }

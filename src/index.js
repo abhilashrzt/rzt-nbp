@@ -5,10 +5,11 @@ import { Router } from 'react-router';
 import { loadToDoList } from './actions/actions';
 import App from './containers/App/App';
 import store from './store';
+import createRoutes from './routes';
 import './index.css';
 import history from './history';
 
-store.dispatch(loadToDoList());
+//store.dispatch(loadToDoList());
 
 const target = document.querySelector('#root');
 
@@ -17,14 +18,13 @@ const rootRoute = {
     path: '/',
     component: App,
     indexRoute: {onEnter: (nextState, replace)=> { replace("/datasets"); }},
-    //childRoutes: createRoutes(store)
+    childRoutes: createRoutes(store)
   } ]
 }
 
 render(
   <Provider store={store}>
-    <Router history={history}>
-      <App/>
+    <Router history={history} routes={rootRoute}>
     </Router>
   </Provider>,
   target,

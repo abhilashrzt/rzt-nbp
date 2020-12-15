@@ -1,4 +1,4 @@
-import { store } from '../index';
+import store from '../store';
 import _ from 'lodash';
 import { URL_STOMP } from './../pages/Global/Global.constants';
 
