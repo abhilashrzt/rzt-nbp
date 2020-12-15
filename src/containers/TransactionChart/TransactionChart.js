@@ -4,6 +4,7 @@ import ChartFilters from './../../components/ChartFilters/ChartFilters';
 import classNames from 'classnames';
 import styles from './TransactionChartContainer.css';
 import CSSModules from 'react-css-modules';
+import {formatINR, shortenINR} from './../../utils';
 
 import './TransactionCharts.css';
 
@@ -11,7 +12,6 @@ import './TransactionCharts.css';
 const moment = require('moment');
 
 const mmmmm_yyyy = (date) => moment(date).format("MMMM YYYY");
-import {formatINR, shortenINR} from './../../utils';
 
 class LineChartContainer extends Component {
     constructor(props) {

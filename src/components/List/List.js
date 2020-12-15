@@ -6,7 +6,6 @@ import styles from './List.css';
 import ListHead from './ListHead/ListHead';
 import ListBody from './ListBody/ListBody';
 
-@CSSModules(styles, {allowMultiple: true})
 class ListInfoHead extends React.Component {
 
     constructor() {

@@ -2,6 +2,8 @@ import * as React from 'react';
 import {connect} from 'react-redux';
 import {push} from 'react-router-redux';
 import CSSModules from 'react-css-modules';
+import _ from 'underscore';
+
 import styles from './Analyse.css';
 import DropDown from './../../components/DropDown/DropDown';
 import AnalyseSegment from './../../containers/AnalyseSegments/AnalyseSegments';
@@ -35,7 +37,6 @@ const revmaps = _.reduce(maps, (acc, value, key)=>({
     }), { })
 
 
-@CSSModules(styles, {allowMultiple: true})
 class Analyse extends React.Component {
 
     constructor(props, ags) {
@@ -130,8 +131,8 @@ class Analyse extends React.Component {
                                                  let url = '/segments?';
 
                                                  url = `${url}segmentLevel=${Number(segmentLevel||0)}`;
-                                                 if (segmentId) url = `${url}&segmentId=${id}`
-                                                 if (segmentName) url = `${url}&segmentName=${name}`
+                                                 if (segmentId) url = `${url}&segmentId=${window.id}`
+                                                 if (segmentName) url = `${url}&segmentName=${window.name}`
 
                                                  if (sortby) {
                                                      url = `${url}&sortby=${sortby}`
@@ -146,8 +147,8 @@ class Analyse extends React.Component {
             </div>
         );
     }
-    
-    
+
+
 }
 
 const mapToProps = (state)=> {

@@ -6,7 +6,6 @@ import {TweenMax} from 'gsap';
 import classNames from 'classnames';
 import Tooltip from './../../components/Tooltip/Tooltip';
 
-@CSSModules(styles, {allowMultiple: true})
 class DatasetHeadField extends  React.Component {
     constructor(props){
         super(props);
@@ -34,12 +33,11 @@ class DatasetHeadField extends  React.Component {
     }
 }
 
-@CSSModules(styles, {allowMultiple: true})
 export default class DatasetHead extends React.Component {
 
     render() {
-        let {fields, onClick, id, deleteAction, headTitle, deletable, page, parent, getFieldColor} = this.props;""
-        return <div styleName="header" onClick={onClick}>
+        let {fields, onClick, id, deleteAction, headTitle, deletable, page, parent, getFieldColor} = this.props;
+        return (<div styleName="header" onClick={onClick}>
             <ul styleName="title-list">
                 { fields.map((field, i) => <DatasetHeadField key={`index${i}field${id}`} field={field}
                                                              getFieldColor={ getFieldColor }/> ) }
@@ -78,6 +76,6 @@ export default class DatasetHead extends React.Component {
                 </li>}
 
             </ul>
-        </div>
+        </div>)
     }
 }

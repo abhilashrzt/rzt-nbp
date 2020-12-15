@@ -1,5 +1,7 @@
 import * as React from "react";
 import CSSModules from 'react-css-modules';
+import _ from 'underscore';
+
 import styles from './BarGraph.css';
 import classNames from 'classnames';
 import {nFormatter} from './../../utils';

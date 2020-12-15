@@ -1,6 +1,7 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import styles from './Pagination.css';
+import _ from 'underscore';
 
 export default class Pagination extends React.Component {
     constructor(props) {
@@ -44,7 +45,7 @@ export default class Pagination extends React.Component {
 
         }
 
-        !totalVisibleButtons ? totalVisibleButtons = 1 : '';
+        totalVisibleButtons = !totalVisibleButtons ? 1 : '';
 
         for (let i = buttonIndex; i < totalVisibleButtons; i++) {
             indexButtons.push(<li key={i + 1} className={(Number(currentPage||0) === i + 1) ? styles.active : ''}

@@ -1,4 +1,5 @@
-import _ from 'lodash';
+import _ from 'underscore';
+
 export {createReducerFromObject} from './reducerUtils';
 export {request} from './request';
 export {getHooks} from './hooks';

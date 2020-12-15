@@ -2,7 +2,6 @@ import React from 'react';
 import CSSModules from 'react-css-modules';
 import styles from './SecondaryList.css';
 
-@CSSModules(styles, {allowMultiple: true})
 export default class SecondaryList extends React.Component {
     render() {
         let {listData} = this.props;

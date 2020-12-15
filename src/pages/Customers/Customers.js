@@ -1,6 +1,8 @@
 import * as React from "react";
 import {connect} from "react-redux";
 import {push} from "react-router-redux";
+import _ from 'lodash';
+
 import CSSModules from "react-css-modules";
 import styles from "./Customers.css";
 import DropDown from "./../../components/DropDown/DropDown";
@@ -31,7 +33,6 @@ const revmaps = _.reduce(maps, (acc, value, key)=>({
 }), { })
 
 
-@CSSModules(styles, {allowMultiple: true})
 class Customers extends React.Component {
 
     constructor(props, ags) {

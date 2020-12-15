@@ -1,4 +1,6 @@
 import * as React from "react";
+import _ from 'lodash';
+
 import {connect} from "react-redux";
 import CSSModules from "react-css-modules";
 import styles from "./Feedback.css";

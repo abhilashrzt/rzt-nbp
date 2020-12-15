@@ -1,6 +1,8 @@
 import * as React from "react";
 import CSSModules from 'react-css-modules';
 import styles from '../../List.css';
+import _ from 'underscore';
+
 const propensity = {
     0: 'Low',
     1: 'High',

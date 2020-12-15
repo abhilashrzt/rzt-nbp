@@ -2,16 +2,17 @@
  * Created by vinojv on 14/11/16.
  */
 import * as React from "react";
+import _ from 'underscore';
+
 import CSSModules from "react-css-modules";
 import styles from "./PageHeader.css";
 import logoPath from "./../../images/logo.png";
-import {Link} from "react-router";
+import {Link} from "react-router-dom";
 import DownloadFile from './../../components/DownloadFile/DownloadFile';
 import {connect} from 'react-redux';
 import {actionSagaDownloadCustomers} from './../../pages/Analyse/Analyse.actions';
 import DownloadSegmentsPopup from '../DownloadCustomers/DownloadCustomers'
 
-@CSSModules(styles, {allowMultiple: true})
 class PageHeader extends React.Component {
     constructor(props) {
         super(props);

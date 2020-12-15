@@ -7,7 +7,7 @@ import {
     url_analyse_segments
 } from './Analyse.constants';
 import { actionDownloadProgress } from '../Global/Global.actions';
-import { downloadCustomers } from '../../utils/request';
+// import { downloadCustomers } from '../../utils/request';
 import {
     actionLoadAnalyseSegment
 } from './Analyse.actions';
@@ -51,7 +51,7 @@ function* loadAnalyseSegments({payload = {level: 0, dataset_id: 1 }}) {
 function* prepareToDownload({payload}) {
     console.log(payload);
     let {dataset_id} = payload;
-    downloadCustomers({ dataset_id });
+    // downloadCustomers({ dataset_id });
     yield put(actionDownloadProgress({
         progress: 0,
         visible: true

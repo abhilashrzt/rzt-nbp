@@ -1,4 +1,6 @@
 import * as React from 'react';
+import _ from 'lodash';
+
 import TransitionGroup from 'react-addons-transition-group';
 import {dateformatter} from '../../utils/formatter';
 import CSSModules from 'react-css-modules';

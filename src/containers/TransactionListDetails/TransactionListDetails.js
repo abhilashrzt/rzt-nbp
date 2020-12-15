@@ -34,7 +34,6 @@ const nFormatter = function (num, digits) {
 
 const toMillion = number => number / 1000000 + ' M';
 
-@CSSModules(styles, {allowMultiple: true})
 class TransactionListDetails extends React.Component {
     constructor(props, context) {
         super(props, context)

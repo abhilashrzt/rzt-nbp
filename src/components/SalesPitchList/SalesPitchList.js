@@ -3,8 +3,7 @@ import classNames from 'classnames';
 import CSSModules from 'react-css-modules';
 import styles from './SalesPitchList.css';
 
-@CSSModules(styles, {allowMultiple: true})
-export default class SalesPitchList extends React.Component{
+ class SalesPitchList extends React.Component{
     static propTypes = {
         list: React.PropTypes.array
     }
@@ -25,4 +24,7 @@ export default class SalesPitchList extends React.Component{
         </div>);
     }
 
+
 }
+
+export default SalesPitchList;

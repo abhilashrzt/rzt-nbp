@@ -9,7 +9,6 @@ import {actionTogglePopup} from './../../pages/Global/Global.actions';
 
 import {actionDeleteDatasets, actionDeleteDatasetsSaga, actionChangeDatasetAction } from './Datasets.actions';
 
-@CSSModules(styles, {allowMultiple: true})
 class Datasets extends React.Component {
     constructor(props, ags) {
         super(props, ags);

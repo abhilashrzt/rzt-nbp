@@ -1,4 +1,6 @@
 import * as React from 'react';
+import _ from 'underscore';
+
 import classNames from 'classnames';
 import styles from './CustomerList.css';
 

@@ -1,5 +1,6 @@
 import store from '../store';
-import _ from 'lodash';
+import _ from 'underscore';
+
 import { URL_STOMP } from './../pages/Global/Global.constants';
 
 import SockJS from 'sockjs-client';

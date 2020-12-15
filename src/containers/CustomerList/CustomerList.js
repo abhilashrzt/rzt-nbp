@@ -1,6 +1,8 @@
 import * as React from 'react';
 import CSSModules from 'react-css-modules';
 import classnames from 'classnames';
+import _ from 'lodash';
+
 import TransitionGroup from 'react-addons-transition-group';
 import styles from './../../components/Dataset/Dataset.css';
 import DatasetHead from './../../components/Dataset/DatasetHead';
@@ -27,7 +29,6 @@ const getFieldColor = ( record ) => {
     return colors;
 }
 
-@CSSModules(styles, {allowMultiple: true})
 export default class CustomerList extends React.Component {
     constructor(props) {
         super(props);

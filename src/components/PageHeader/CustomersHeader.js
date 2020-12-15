@@ -2,7 +2,7 @@
  * Created by vinojv on 14/11/16.
  */
 import * as React from "react";
-import {Link} from "react-router";
+import {Link} from "react-router-dom";
 import CSSModules from "react-css-modules";
 import {connect} from 'react-redux';
 import {push} from 'react-router-redux';
@@ -11,7 +11,7 @@ import styles from "./PageHeader.css";
 import logoPath from "./../../images/logo.png";
 import classNames from 'classnames';
 
-import {actionSagaLoadCustomers, actionSagaLoadCustomer} from '../../pages/Feedback/Feedback.actions';
+import { actionSagaLoadCustomer} from '../../pages/Feedback/Feedback.actions';
 
 import {ActionCreators as UndoActionCreators} from 'redux-undo'
 
@@ -67,15 +67,15 @@ const mapToProps = (state)=> ({ }), dispatcher = (dispatch)=>({
     onUndo: () => dispatch(UndoActionCreators.undo()),
     onRedo: () => dispatch(UndoActionCreators.redo()),
     discardChanges: (data, resetChanges) => {
-        dispatch(actionSagaLoadSegments(data));
+        // dispatch(actionSagaLoadSegments(data));
         resetChanges(0, 0);
     },
     saveSegments: (payload, resetChanges)=> {
-        dispatch(actionUpdateSegmentsSaga(payload));
+        // dispatch(actionUpdateSegmentsSaga(payload));
         resetChanges(1, 0);
     },
     loadCustomersData: (data) => {
-        dispatch(actionSagaLoadCustomers(data));
+        // dispatch(actionSagaLoadCustomers(data));
     },
     loadCustomerData: (data) => {
         dispatch(actionSagaLoadCustomer(data));

@@ -5,7 +5,6 @@ import classNames from 'classnames';
 
 const compareTwoStrings = (a = "", b = "") => a.toLowerCase().includes(b.toLowerCase());
 
-@CSSModules(styles, {allowMultiple: true})
 export default class DownloadSegmentsPopup extends React.Component {
     static defaultProps = {
         segments: [],
@@ -22,15 +21,15 @@ export default class DownloadSegmentsPopup extends React.Component {
     }
 
     componentWillMount() {
-        document.body.addEventListener('click', this.handleClick);
+        window.addEventListener('click', this.handleClick);
     }
 
     componentWillUnmount() {
         // remember to remove all events to avoid memory leaks
-        document.body.removeEventListener('click', this.handleClick);
+        window.removeEventListener('click', this.handleClick);
     }
 
-    handleClick() {
+    handleClick(event) {
         const {close} = this.props; // get click outside callback
         const {target} = event; // get direct click event target
         if (target !== this.wrapper && !this.wrapper.contains(target)) {
@@ -96,7 +95,7 @@ export default class DownloadSegmentsPopup extends React.Component {
                             styleName="decileListItem"
                             title={name}
                             onClick={() => {
-                                window.open(`${location.origin}/rest/datasets/${dataset_id}/download?segmentId=${this.state.selectedSegmentId}&decileId=${id}`);
+                                window.open(`${window.location.origin}/rest/datasets/${dataset_id}/download?segmentId=${this.state.selectedSegmentId}&decileId=${id}`);
                                 close && close();
                             }}>
                             <span styleName="decileListItemText" className="flaticon-download"> {name} </span>

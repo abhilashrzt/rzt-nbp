@@ -25,12 +25,14 @@ export default function createRoutes(store) {
             path: "datasets",
             page: "datasets",
             getComponent(location, cb) {
-                require.ensure(['./pages/Datasets/Datasets', './pages/Datasets/Datasets.sagas', './pages/Datasets/Datasets.reducers'],
-                    require => {
-                        const Dataset = require('./pages/Datasets/Datasets').default;
-                        const DatasetSagas = require('./pages/Datasets/Datasets.sagas').default;
-                        const DatasetReducer = require('./pages/Datasets/Datasets.reducers').default;
-                        const Header = require('./components/PageHeader').pageHeader;
+                Promise.all([import('./pages/Datasets/Datasets'), import('./pages/Datasets/Datasets.sagas'), import('./pages/Datasets/Datasets.reducers'), import('./components/PageHeader')]).then(([
+                  DatasetsComp, sagas, reducers, PageHeader
+                  ]) => {
+                        const Dataset = DatasetsComp.default;
+                        const DatasetSagas = sagas.default;
+                        const DatasetReducer = reducers.default;
+                        const Header = PageHeader.pageHeader;
+console.log('her eyo');
 
                         injectReducer('DatasetReducer', DatasetReducer);
                         injectSagas(DatasetSagas);
@@ -83,12 +85,13 @@ export default function createRoutes(store) {
             path: "datasets/:datasetId/segments",
             page: "segments",
             getComponent(nextLocation, cb) {
-                require.ensure(['./pages/Analyse/Analyse', './pages/Analyse/Analyse.sagas', './pages/Analyse/Analyse.reducers'],
-                    require => {
-                        const Analyse = require('./pages/Analyse/Analyse').default;
-                        const AnalyseSagas = require('./pages/Analyse/Analyse.sagas').default;
-                        const AnalyseReducer = require('./pages/Analyse/Analyse.reducers').default;
-                        const Header = require('./components/PageHeader').pageHeader;
+                Promise.all([import('./pages/Analyse/Analyse'), import('./pages/Analyse/Analyse.sagas'), import('./pages/Analyse/Analyse.reducers'), import('./components/PageHeader')]).then(([
+                  AnalyseComp, sagas, reducers, PageHeader
+                  ]) => {
+                        const Analyse = AnalyseComp.default;
+                        const AnalyseSagas = sagas.default;
+                        const AnalyseReducer = reducers.default;
+                        const Header = PageHeader.pageHeader;
 
                         injectReducer('analyse', AnalyseReducer);
                         injectSagas(AnalyseSagas);
@@ -119,12 +122,12 @@ export default function createRoutes(store) {
             path: "/datasets/:datasetId/customers",
             page: "customers",
             getComponent(nextLocation, cb) {
-                require.ensure(['./pages/Customers/Customers', './pages/Customers/Customers.sagas', './pages/Customers/Customers.reducers'],
-                    require => {
-                        const Customers = require('./pages/Customers/Customers').default;
-                        const CustomersSagas = require('./pages/Customers/Customers.sagas').default;
-                        const CustomersReducer = require('./pages/Customers/Customers.reducers').default;
-                        const Header = require('./components/PageHeader').pageHeader;
+                Promise.all([import('./pages/Customers/Customers'), import('./pages/Customers/Customers.sagas'), import('./pages/Customers/Customers.reducers')])
+                  .then(([CustomersComp,saga,reducer, PageHeader]) => {
+                        const Customers = CustomersComp.default;
+                        const CustomersSagas = saga.default;
+                        const CustomersReducer = reducer.default;
+                        const Header = PageHeader.pageHeader;
 
                         injectReducer('customers', CustomersReducer);
                         injectSagas(CustomersSagas);
@@ -143,8 +146,7 @@ export default function createRoutes(store) {
                             header: Header,
                             main: Customers
                         });
-                    }
-                );
+                    });
             },
             onChange: () => {
                 store.dispatch(actionLeaveCustomersPage());
@@ -157,12 +159,12 @@ export default function createRoutes(store) {
         // /datasets/:id/feedback?customerId
             path: "/datasets/:datasetId/customers/:customerId",
             getComponent(nextLocation, cb) {
-                require.ensure(['./pages/Feedback/Feedback', './pages/Feedback/Feedback.sagas', './pages/Feedback/Feedback.reducers'],
-                    require => {
-                        const Customer = require('./pages/Feedback/Feedback').default;
-                        const CustomerSagas = require('./pages/Feedback/Feedback.sagas.js').default;
-                        const CustomerReducer = require('./pages/Feedback/Feedback.reducers.js').default;
-                        const Header = require('./components/PageHeader').pageHeaderCustomer;
+                Promise.all([import('./pages/Feedback/Feedback'), import('./pages/Feedback/Feedback.sagas'), import('./pages/Feedback/Feedback.reducers')])
+                  .then(([FeedbackComp, saga,reducer,PageHeader]) => {
+                        const Customer = FeedbackComp.default;
+                        const CustomerSagas = saga.default;
+                        const CustomerReducer = reducer.default;
+                        const Header = PageHeader.pageHeaderCustomer;
 
                         injectReducer('customers', CustomerReducer);
                         injectSagas(CustomerSagas);

@@ -4,7 +4,6 @@ import styles from './ListContainer.css';
 import classNames from 'classnames';
 import DropDown from '../../components/DropDown/DropDown';
 
-@CSSModules(styles, {allowMultiple: true})
 // export default class ListContainer extends React.Component {
 //     render() {
 //         let {listTitle,listData,list,filter} = this.props;
@@ -25,7 +24,7 @@ import DropDown from '../../components/DropDown/DropDown';
 //         </div>)
 //     }
 // }
-export default class ListContainer extends React.Component {
+class ListContainer extends React.Component {
     constructor(props){
         super(props);
         this.state = {
@@ -71,3 +70,5 @@ export default class ListContainer extends React.Component {
         )
     }
 }
+
+export default ListContainer;

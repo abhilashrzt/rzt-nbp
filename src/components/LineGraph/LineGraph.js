@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { ResponsiveContainer, LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 import styles from './LineGraph.css';
 import classNames from 'classnames';
-
+import _ from 'lodash';
 
 const CustomizedLegend = ({ legendList }) => (
     <ul className={classNames(styles.legend, "fright")}>

@@ -4,7 +4,6 @@ import styles from './DropDownTreeList.css';
 import classNames from 'classnames';
 
 
-@CSSModules(styles, {allowMultiple: true})
 class DropDownList extends React.Component {
     constructor(props) {
         super(props);

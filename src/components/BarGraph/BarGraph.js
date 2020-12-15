@@ -1,4 +1,6 @@
 import * as React from "react";
+import _ from 'lodash';
+
 import classNames from 'classnames';
 import styles from './BarGraph.css';
 import {

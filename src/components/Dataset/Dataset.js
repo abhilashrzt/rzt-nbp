@@ -1,22 +1,21 @@
 import * as React from "react";
 import CSSModules from 'react-css-modules';
 import ReactDOM from 'react-dom';
-import {Link} from 'react-router';
+import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import styles from './Dataset.css';
 import classnames from 'classnames';
 import {dateformatter} from '../../utils/formatter';
 import Button from './../../components/Button/Button'
 import TransitionGroup from 'react-addons-transition-group';
-import {TweenMax} from 'gsap';
+import {TweenMax, TimelineMax, Power3} from 'gsap';
+import DatasetHead from './DatasetHead';
+import {actionTogglePopup} from './../../pages/Global/Global.actions';
 import {actionDeleteDatasets} from './../../pages/Datasets/Datasets.actions';
 const moment = require('moment');
-import DatasetHead from './DatasetHead';
 
-import {actionTogglePopup} from './../../pages/Global/Global.actions';
 let toggleListbodyAnimation;
 
-@CSSModules(styles, {allowMultiple: true})
 class DatasetBody extends React.Component {
 
     componentWillEnter(callback) {
@@ -92,7 +91,6 @@ class DatasetBody extends React.Component {
 }
 ;
 
-@CSSModules(styles, {allowMultiple: true})
 class Dataset extends React.Component {
     static propTypes = {records: React.PropTypes.array};
     static defaultProps = {records: []};
