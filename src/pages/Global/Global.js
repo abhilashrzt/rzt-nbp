@@ -1,4 +1,5 @@
 import * as React from "react";
+import ReactDOM from 'react-dom';
 import CSSModules from "react-css-modules";
 import styles from './Global.css';
 import Button from './../../components/Button/Button';
@@ -57,6 +58,38 @@ class notificationBar extends React.Component {
     constructor(props) {
         super(props)
     }
+
+    // componentWillEnter(callback) {
+    //     const el = ReactDOM.findDOMNode(this);
+    //
+    //     let t1 = new TimelineMax();
+    //
+    //     t1.from(
+    //         el,
+    //         0.25,
+    //         {
+    //             bottom: -40,
+    //             ease: Power3.ease,
+    //             onComplete: callback
+    //         }
+    //     )
+    // }
+
+    // componentWillLeave(callback) {
+    //     const el = ReactDOM.findDOMNode(this);
+    //
+    //     let t1 = new TimelineMax();
+    //
+    //     t1.to(
+    //         el,
+    //         0.25,
+    //         {
+    //             bottom: -40,
+    //             ease: Power3.ease,
+    //             onComplete: callback
+    //         }
+    //     )
+    // }
 
     render() {
         let {data, hideNotificationBar} =  this.props;

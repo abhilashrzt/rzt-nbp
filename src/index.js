@@ -1,31 +1,35 @@
-import React from 'react';
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
-import { Router } from 'react-router';
-import { loadToDoList } from './actions/actions';
-import App from './containers/App/App';
-import store from './store';
-import './index.css';
-import history from './history';
+import * as React from "react";
+import { render } from "react-dom";
+import { browserHistory, Router } from 'react-router';
+import { Provider} from "react-redux";
+import { syncHistoryWithStore } from 'react-router-redux';
 
-store.dispatch(loadToDoList());
+import './fonts/flaticon/flaticon.css';
+import './global.css';
 
-const target = document.querySelector('#root');
+import configureStore from './store';
+import App from './containers/App/app'
+import createRoutes from './routes';
+
+export const store = configureStore(browserHistory);
 
 const rootRoute = {
-  childRoutes: [{
-    path: '/',
-    component: App,
-    indexRoute: {onEnter: (nextState, replace)=> { replace("/datasets"); }},
-    //childRoutes: createRoutes(store)
-  } ]
+    childRoutes: [{
+        path: '/',
+        component: App,
+        indexRoute: {onEnter: (nextState, replace)=> { replace("/datasets"); }},
+        childRoutes: createRoutes(store)
+    } ]
 }
 
+
+const history = syncHistoryWithStore(browserHistory, store);
+
 render(
-  <Provider store={store}>
-    <Router history={history}>
-      <App/>
-    </Router>
-  </Provider>,
-  target,
+    <Provider store={store}>
+        <Router history={browserHistory}
+                routes={rootRoute}>
+        </Router>
+    </Provider>,
+    document.getElementById('root')
 );
